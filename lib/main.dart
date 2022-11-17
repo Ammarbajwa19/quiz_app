@@ -65,6 +65,22 @@ class _MyappState extends State<Myapp> {
             ],
           ),
         ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            child:
+            Icon(Icons.add);
+            backgroundColor:
+            Colors.amber;
+            foregroundColor:
+            Colors.blue;
+            elevation:
+            0;
+            // shape:
+            // BeveledRectangleBorder(borderRadius: BorderRadius.circular(15.0));
+          },
+        ),
+        bottomNavigationBar: BottomAppBar(),
       ),
       debugShowCheckedModeBanner: false,
     );
