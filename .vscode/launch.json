@@ -9,6 +9,13 @@
             "type": "dart",
             "request": "attach"
         },
+
+
+        {
+            "name": "Flutter: Attach to Device",
+            "type": "dart",
+            "request": "attach"
+        },
         {
             "name": "Dart: Attach to Process",
             "type": "dart",
