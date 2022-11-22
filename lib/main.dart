@@ -21,9 +21,9 @@ class _MyappState extends State<Myapp> {
     {
       'questiontext': 'What is your favourite color',
       'answers': [
-        {'text': 'red', 'score': 10},
-        {'text': 'blue', 'score': 5},
-        {'text': 'green', 'score': 7},
+        {'text': 'Red', 'score': 10},
+        {'text': 'Blue', 'score': 5},
+        {'text': 'Green', 'score': 7},
         {'text': 'Black', 'score': 8}
       ],
     },
@@ -42,7 +42,7 @@ class _MyappState extends State<Myapp> {
         {'Text': 'Ammar', 'score': 4},
         {'text': 'Mazhar', 'score': 7},
         {'text': 'BaJwa', 'score': 8},
-        {'text': 'khan', 'score': 9}
+        {'text': 'Khan', 'score': 9}
       ],
     },
   ];
@@ -87,22 +87,93 @@ class _MyappState extends State<Myapp> {
             ],
           ),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            child:
-            Icon(Icons.add);
-            backgroundColor:
-            Colors.amber;
-            foregroundColor:
-            Colors.blue;
-            elevation:
-            0;
-            // shape:
-            // BeveledRectangleBorder(borderRadius: BorderRadius.circular(15.0));
-          },
+            onPressed: () {},
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Icon(
+                  Icons.add,
+                  color: Colors.amber,
+                ),
+              ],
+            )),
+        bottomNavigationBar: BottomAppBar(
+          notchMargin: 5.0,
+          shape: CircularNotchedRectangle(),
+          color: Colors.black,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 10.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: Colors.white,
+                    ),
+                    Text(
+                      'Home',
+                      style: TextStyle(color: Colors.white),
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(right: 20, top: 10, bottom: 10),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(
+                      Icons.shopping_cart,
+                      color: Colors.white,
+                    ),
+                    Text(
+                      'Shop',
+                      style: TextStyle(color: Colors.white),
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(right: 0, top: 10, bottom: 10),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(
+                      Icons.thumb_up,
+                      color: Colors.white,
+                    ),
+                    Text(
+                      'Like',
+                      style: TextStyle(color: Colors.white),
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(right: 10, top: 10, bottom: 10),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(
+                      Icons.settings,
+                      color: Colors.white,
+                    ),
+                    Text(
+                      'Settings',
+                      style: TextStyle(color: Colors.white),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
-        bottomNavigationBar: BottomAppBar(),
       ),
       debugShowCheckedModeBanner: false,
     );
