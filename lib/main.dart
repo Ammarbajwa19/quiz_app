@@ -107,9 +107,13 @@ class _MyappState extends State<Myapp> {
                 ],
               ),
               ListTile(
-                leading: Icon(Icons.home),
-                title: Text("Home"),
-                onTap: () {},
+                leading: IconButton(
+                  icon: Icon(Icons.home),
+                  onPressed: () {},
+                  iconSize: 10,
+                  splashColor: Colors.lightBlue,
+                  highlightColor: Colors.white,
+                ),
               ),
               ListTile(
                 leading: Icon(Icons.account_box),
@@ -154,9 +158,11 @@ class _MyappState extends State<Myapp> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Icon(
-                      Icons.home,
-                      color: Colors.white,
+                    IconButton(
+                      icon: Icon(Icons.home),
+                      onPressed: () {},
+                      splashColor: Colors.lightBlue,
+                      highlightColor: Colors.white,
                     ),
                     Text(
                       'Home',
