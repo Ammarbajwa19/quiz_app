@@ -110,7 +110,7 @@ class _MyappState extends State<Myapp> {
                 leading: IconButton(
                   icon: Icon(Icons.home),
                   onPressed: () {},
-                  iconSize: 10,
+                  iconSize: 30,
                   splashColor: Colors.lightBlue,
                   highlightColor: Colors.white,
                 ),
