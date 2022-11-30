@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_application_1/question.dart';
 import 'package:flutter_application_1/quiz.dart';
 import 'package:flutter_application_1/result.dart';
+import 'NavigationDrawerWidget.dart';
 import './quiz.dart';
 import 'result.dart';
 
@@ -64,10 +65,11 @@ class _MyappState extends State<Myapp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        drawer: NavigationDarwerWidget(),
         appBar: AppBar(
           title: Text("Ammar"),
         ),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.lightBlue,
         body: _questionindex < _questions.length
             ? quiz(
                 answerquestion: _answerquestion,
@@ -75,64 +77,6 @@ class _MyappState extends State<Myapp> {
                 questions: _questions,
               )
             : result(_totalscore),
-        drawer: Drawer(
-          child: ListView(
-            children: [
-              UserAccountsDrawerHeader(
-                accountName: Text("Ammar"),
-                accountEmail: Text("ammarsaab@gmail.com"),
-                currentAccountPicture: CircleAvatar(
-                  backgroundImage: NetworkImage(
-                      "https://appmaking.co/wp-content/uploads/2021/08/appmaking-logo-colored.png"),
-                ),
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: NetworkImage(
-                      "https://appmaking.co/wp-content/uploads/2021/08/android-drawer-bg.jpeg",
-                    ),
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                otherAccountsPictures: [
-                  CircleAvatar(
-                    backgroundColor: Colors.white,
-                    backgroundImage: NetworkImage(
-                        "https://randomuser.me/api/portraits/women/74.jpg"),
-                  ),
-                  CircleAvatar(
-                    backgroundColor: Colors.white,
-                    backgroundImage: NetworkImage(
-                        "https://randomuser.me/api/portraits/men/47.jpg"),
-                  ),
-                ],
-              ),
-              ListTile(
-                leading: IconButton(
-                  icon: Icon(Icons.home),
-                  onPressed: () {},
-                  iconSize: 30,
-                  splashColor: Colors.lightBlue,
-                  highlightColor: Colors.white,
-                ),
-              ),
-              ListTile(
-                leading: Icon(Icons.account_box),
-                title: Text("About"),
-                onTap: () {},
-              ),
-              ListTile(
-                leading: Icon(Icons.grid_3x3_outlined),
-                title: Text("Products"),
-                onTap: () {},
-              ),
-              ListTile(
-                leading: Icon(Icons.contact_mail),
-                title: Text("Contact"),
-                onTap: () {},
-              )
-            ],
-          ),
-        ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
             onPressed: () {},
@@ -148,7 +92,7 @@ class _MyappState extends State<Myapp> {
         bottomNavigationBar: BottomAppBar(
           notchMargin: 5.0,
           shape: CircularNotchedRectangle(),
-          color: Colors.black,
+          color: Colors.amber,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             mainAxisSize: MainAxisSize.max,
