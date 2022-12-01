@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 import 'package:flutter/src/widgets/container.dart';
+import 'peoplepage.dart';
 
 import 'NavigationDrawerWidget.dart';
 
 class NavigationDarwerWidget extends StatelessWidget {
   const NavigationDarwerWidget({super.key});
+  
+  get index => null;
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +17,7 @@ class NavigationDarwerWidget extends StatelessWidget {
       child: Material(
         color: Colors.blue,
         child: ListView(
+          
           children: <Widget>[
             SizedBox(
               height: 40,
@@ -21,7 +25,8 @@ class NavigationDarwerWidget extends StatelessWidget {
             buildMenuItem(
               text: 'People',
               icon: Icons.people,
-            ),
+              onClicked: () => selectedItem(context, 0)
+            ), 
             SizedBox(
               height: 16,
             ),
@@ -83,5 +88,12 @@ class NavigationDarwerWidget extends StatelessWidget {
       hoverColor: hoverColor,
       onTap: onClicked,
     );
+  }
+  
+  void selectedItem(BuildContext context, int i) {
+    switch(index){
+      case 0:
+      Navigator.of(context).push(MaterialPageRoute(builder: (context) => PeoplePage() ));
+    }
   }
 }
